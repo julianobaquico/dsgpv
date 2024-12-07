@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendas PV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container"></div>
+
+    <script>
+        const nomes = ["Juliano", "Julie", "Rayssa", "Mili", "Talita", "Nicole", "Danieli", "Lena", "Luciana", "Jucelia", "Jaqueline", "Kemily", "Joaquim", "Lucivania", "Andreia", "Tonho", "Geovana", "Marcia", "Bruna", "Ana Claudia", "Stefany"];
+        const links = { // Mapeia nomes para URLs
+            "Juliano": "https://docs.google.com/forms/d/e/1FAIpQLSceZA6_WNInAWyg3fgLGetRk7EeJJPKgcEBjnko_mzkd5x4Pw/viewform?usp=sf_link",
+            "Julie": "https://www.exemplo-julie.com",
+            "Rayssa": "https://www.exemplo-rayssa.com",
+            // ... adicione os outros links aqui
+            "Stefany": "https://www.exemplo-stefany.com"
+
+        };
+        const container = document.querySelector('.container');
+
+        nomes.forEach(nome => {
+            const botao = document.createElement('a'); // Volta a usar <a> para links
+            botao.href = links[nome];  // Define o link do botão
+            botao.classList.add('botao');
+            botao.textContent = nome;
+            botao.target = "_blank"; // Abre em uma nova aba
+            container.appendChild(botao);
+        });
+    </script>
+</body>
+</html>

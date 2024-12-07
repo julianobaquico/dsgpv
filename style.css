@@ -1,0 +1,55 @@
+/* style.css */
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column; /* Alinha itens verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+    width: 90%; /* Ocupa 90% da largura da tela */
+    max-width: 800px; /* Largura máxima */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra sutil */
+    border-radius: 5px; /* Cantos arredondados */
+    background-color: white;  /* Fundo branco para o container */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+.botao {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-size: 16px;  /* Tamanho da fonte */
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+}
+
+
+.botao:hover {
+    background-color: #45a049;
+}
+
+
+/* Estilos para o iframe (se você estiver usando) */
+iframe {
+    display: block;
+    margin: 20px auto;  /* Centraliza o iframe */
+    width: 90%;
+    max-width: 640px;
+    height: 80vh;
+    border: none;  /* Remove a borda do iframe */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra */
+}
