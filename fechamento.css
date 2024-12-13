@@ -1,79 +1,8 @@
-.container {
-    display: grid;
-    grid-template-columns: repeat(11, 1fr); /* 11 colunas para os valores + X */
-    grid-gap: 5px;
-    width: fit-content; /* Ajusta a largura ao conteúdo */
-    margin: 20px auto; /* Centraliza horizontalmente */
-    border-collapse: collapse; /* Remove espaçamento entre as células */
-
-}
-
-.valor, .quantidade {
-    text-align: center;
-    padding: 5px;
-    border: 1px solid black;
-    font-weight: bold;
-}
-
-.valores {
-    display: contents;
-    grid-column: span 10; /* Ajusta o span das colunas */
-}
-
-.valor:nth-child(n+2) { /* Aplica estilo aos valores monetários */
-    background-color: red;
-    color: white;
-}
-
-
-.quantidades, .resultados-parciais {
-    display: contents;
-    grid-column: span 11;
-
-}
-
-.quantidade {
-   background-color: #FFFFCC;
-}
-
-.quantidade input[type="number"] {
-    width: 100%;
-    text-align: center;
-    border: none;
-    background-color: transparent; /* Torna o fundo do input transparente */
-    font-weight: bold; /* Mantém o texto em negrito */
-
-}
-
-#calcular {
-    grid-column: span 10;
-    justify-self: center;
-    padding: 10px 20px;
-    background-color: #4CAF50; /* Green */
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-
-}
-
-.total {
-    grid-column: span 11; /* Total ocupa duas colunas */
-    grid-row: span 2;
-    justify-self: end;
-    align-self: center;
-    display: flex;
-    align-items: center;
-    background-color: green;
-    color: white;
+.resultados-parciais > div {
+    display: inline-block;
+    margin-right: 5px;
     padding: 5px 10px;
-    font-weight: bold;
-}
-
-.resultados-parciais div {
-    background-color: yellow;
-}
-
-#valor-total {
-    margin-left: 10px; /* Espaço entre "Total:" e o valor */
+    border: 1px solid #ccc;
+    min-width: 50px; /* Largura mínima para os resultados */
+    text-align: center;
 }
