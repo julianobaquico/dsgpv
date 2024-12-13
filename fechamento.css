@@ -1,10 +1,36 @@
-#resultados-parciais > div {
-    display: inline-block;
-    margin-right: 10px;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    min-width: 60px;
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+th, td {
+    border: 1px solid #ddd;
     text-align: center;
-    background-color: #f9f9f9;
+    padding: 8px;
+}
+
+th {
+    background-color: red;
+    color: white;
+}
+
+.result-row {
+    background-color: yellow;
+}
+
+.total {
+    background-color: green;
+    color: white;
     font-weight: bold;
+}
+
+input[type="number"] {
+    width: 80%;
 }
