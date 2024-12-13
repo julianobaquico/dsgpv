@@ -19,22 +19,22 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
-    width: 90%;
+    padding: 20px; /* Padding adaptável */
+    width: 95%; /* Largura adaptável */
     max-width: 900px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Sombra mais suave e elegante */
-    border-radius: 10px; /* Bordas mais arredondadas */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
     background-color: white;
-    margin-top: 30px;
-    border: 1px solid #e0e0e0; /* Adiciona uma borda sutil */
+    margin: 20px auto; /* Margem adaptável */
+    border: 1px solid #e0e0e0;
 }
 
 /* --- Painel de Botões --- */
 
 .button-panel {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Colunas responsivas, um pouco mais largas */
-    gap: 25px; /* Espaço maior entre os botões */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Colunas responsivas, priorizando o mobile */
+    gap: 15px;
     width: 100%;
 }
 
@@ -52,33 +52,33 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px; /* Aumenta o padding interno */
+    padding: 15px; /* Padding adaptável */
     background-color: #28a745;
     color: white;
     text-decoration: none;
     border-radius: 8px;
-    transition: all 0.3s ease-in-out; /* Transição mais suave */
+    transition: all 0.3s ease-in-out;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1rem; /* Tamanho de fonte adaptável */
     font-weight: 500;
     border: none;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Sombra mais discreta */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
     white-space: nowrap;
     cursor: pointer;
-    height: 80px;
     width: 100%;
+    min-height: 60px; /* Altura mínima para toque confortável */
 }
 
 .botao:hover {
     background-color: #218838;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais acentuada no hover */
-    transform: translateY(-3px); /* Efeito de elevação maior no hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
 }
 
 .botao:focus,
 .botao:active {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5); /* Outline verde no focus/active */
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5);
 }
 
 /* --- Botões Secundários (Opcional) --- */
@@ -92,28 +92,7 @@ h1, h2, h3 {
     background-color: #ced4da;
 }
 
-/* --- Iframe (Removido, já que não é o foco) --- */
-
-/* --- Responsividade --- */
-
-@media (max-width: 768px) {
-    .button-panel {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Colunas responsivas, mais estreitas */
-        gap: 15px;
-    }
-    .container {
-        padding: 20px; /* Reduz o padding em telas menores */
-        border-radius: 8px; /* Bordas menos arredondadas em telas menores */
-    }
-
-    .botao {
-        font-size: 1rem;
-        padding: 15px; /* Reduz o padding em telas menores */
-        height: auto; /* Altura flexível */
-    }
-}
-
-/* --- Cabeçalho (Se houver) --- */
+/* --- Cabeçalho --- */
 
 .header {
     width: 100%;
@@ -121,16 +100,17 @@ h1, h2, h3 {
     color: white;
     padding: 20px 0;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px; /* Margem adaptável */
 }
 
 .header h1 {
     color: white;
-    font-size: 2rem;
+    font-size: 1.8rem; /* Tamanho de fonte adaptável */
     margin: 0;
+    padding: 0 20px;
 }
 
-/* --- Rodapé (Se houver) --- */
+/* --- Rodapé --- */
 
 .footer {
     width: 100%;
@@ -138,7 +118,36 @@ h1, h2, h3 {
     color: #666;
     padding: 20px 0;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px; /* Margem adaptável */
     font-size: 0.9rem;
-    border-top: 1px solid #e0e0e0; /* Adiciona uma borda superior sutil */
+    border-top: 1px solid #e0e0e0;
+}
+
+/* --- Media Queries para Responsividade --- */
+
+/* Tablets e telas menores */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px auto; /* Margens menores */
+        border-radius: 8px;
+    }
+
+    .header h1 {
+        font-size: 1.5rem; /* Reduz o tamanho do título */
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    .button-panel {
+        grid-template-columns: 1fr; /* Uma coluna em celulares */
+    }
+
+    .botao {
+        font-size: 1.1rem; /* Aumenta um pouco o tamanho da fonte */
+    }
+
+    .container {
+        padding: 10px; /* Reduz o padding */
+    }
 }
