@@ -1,14 +1,51 @@
 /* style.css */
 
-/* ... (todo o seu CSS anterior para body, container, títulos, etc.) ... */
+/* --- Geral (Body e Tipografia) --- */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* --- Container Principal --- */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    padding: 20px;
+    width: 95%;
+    max-width: 900px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    background-color: white;
+    margin: 20px auto;
+    border: 1px solid #e0e0e0;
+}
 
 /* --- Painel de Botões --- */
 
 .button-panel {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Ajustado para botões mais largos */
-    gap: 20px; /* Aumentando o espaçamento */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
     width: 100%;
+}
+
+/* --- Títulos --- */
+
+h1, h2, h3 {
+    color: #28a745;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center; /* Centraliza os títulos */
 }
 
 /* --- Botões --- */
@@ -17,11 +54,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px 25px; /* Aumentando o padding lateral */
+    padding: 15px 25px;
     background-color: #28a745;
     color: white;
     text-decoration: none;
-    border-radius: 10px; /* Cantos arredondados */
+    border-radius: 10px;
     transition: all 0.3s ease-in-out;
     text-align: center;
     font-size: 1.1rem;
@@ -37,7 +74,7 @@
 .botao:hover {
     background-color: #218838;
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px); /* Reduzindo o efeito de elevação */
+    transform: translateY(-2px);
 }
 
 .botao:focus,
@@ -46,28 +83,81 @@
     box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5);
 }
 
+/* --- Botões Secundários (Opcional) --- */
+
+.botao-secundario {
+    background-color: #e9ecef;
+    color: #333;
+}
+
+.botao-secundario:hover {
+    background-color: #ced4da;
+}
+
+/* --- Cabeçalho --- */
+
+.header {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    padding: 20px 0;
+    text-align: center; /* Centraliza o conteúdo do cabeçalho */
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: white;
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0 20px;
+}
+
+/* --- Rodapé --- */
+
+.footer {
+    width: 100%;
+    background-color: #f8f8f8;
+    color: #666;
+    padding: 20px 0;
+    text-align: center; /* Centraliza o conteúdo do rodapé */
+    margin-top: 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid #e0e0e0;
+}
+
 /* --- Responsividade --- */
 
 @media (max-width: 768px) {
     .button-panel {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Ajustando para telas menores */
-        gap: 15px; /* Diminuindo o espaçamento */
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 15px;
     }
 
     .botao {
-        padding: 15px 20px; /* Ajustando o padding */
-        font-size: 1rem; /* Diminuindo a fonte */
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+
+    .container {
+        margin: 10px auto;
+        border-radius: 8px;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
     .button-panel {
-        grid-template-columns: 1fr; /* Uma coluna em celulares */
+        grid-template-columns: 1fr;
     }
 
     .botao {
-        font-size: 1.1rem; /* Aumentando a fonte */
+        font-size: 1.1rem;
+    }
+
+    .container {
+        padding: 10px;
     }
 }
-
-/* ... (restante do seu CSS para cabeçalho, rodapé, etc.) ... */
