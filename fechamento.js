@@ -1,16 +1,18 @@
 let baseValue = 0.05;
 const resultElement = document.getElementById("result");
+const numberInput = document.getElementById("numberInput");
+
+numberInput.addEventListener('input', multiply);
 
 function multiply() {
- const numberInput = document.getElementById("numberInput");
  const number = parseFloat(numberInput.value);
 
  if (isNaN(number)) {
- alert("Por favor, insira um número válido.");
+ // Se a entrada não for um número válido, exibe o valor base
+ resultElement.textContent = `Resultado: ${baseValue.toFixed(2)}`;
  return;
  }
 
- baseValue *= number;
- resultElement.textContent = `Resultado: ${baseValue.toFixed(2)}`;
- numberInput.value = "";
+ const result = baseValue * number;
+ resultElement.textContent = `Resultado: ${result.toFixed(2)}`;
 }
