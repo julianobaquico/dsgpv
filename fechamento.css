@@ -1,36 +1,73 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-table {
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 800px;
 }
 
-th, td {
-    border: 1px solid #ddd;
+h1 {
     text-align: center;
-    padding: 8px;
+    margin-bottom: 20px;
 }
 
-th {
-    background-color: red;
-    color: white;
+.valores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-.result-row {
-    background-color: yellow;
+.valor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.total {
-    background-color: green;
-    color: white;
-    font-weight: bold;
+label {
+    margin-bottom: 5px;
 }
 
 input[type="number"] {
-    width: 80%;
+    width: 80px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.resultado {
+    margin-bottom: 20px;
+}
+
+#total {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
 }

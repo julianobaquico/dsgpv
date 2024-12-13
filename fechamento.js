@@ -1,18 +1,11 @@
-const values = [0.05, 0.10, 0.25, 0.50, 1.00, 2.00, 5.00, 10.00, 20.00];
-
-function calculate() {
+document.getElementById('calcular').addEventListener('click', function() {
+    const valores = [0.05, 0.10, 0.25, 0.50, 1.00, 2.00, 5.00, 10.00, 20.00];
     let total = 0;
 
-    values.forEach(value => {
-        const qty = document.getElementById(`qty-${value.toFixed(2)}`).value;
-        const result = value * qty;
-        document.getElementById(`result-${value.toFixed(2)}`).innerText = result.toFixed(2);
-        total += result;
+    valores.forEach(valor => {
+        const quantidade = parseInt(document.getElementById(valor.toFixed(2)).value);
+        total += valor * quantidade;
     });
 
-    document.getElementById('total').innerText = total.toFixed(2);
-}
-
-document.querySelectorAll('input[type="number"]').forEach(input => {
-    input.addEventListener('input', calculate);
+    document.getElementById('total').value = total.toFixed(2);
 });
