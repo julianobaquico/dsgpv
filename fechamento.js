@@ -1,19 +1,16 @@
-document.getElementById('calcular').addEventListener('click', function() {
-    const valores = [0.05, 0.10, 0.25, 0.50, 1.00, 2.00, 5.00, 10.00, 20.00];
-    let total = 0;
+let baseValue = 0.05;
+const resultElement = document.getElementById("result");
 
-    for (let i = 0; i < valores.length; i++) {
-        const valor = valores[i];
-        const quantidadeElement = document.getElementById(valor.toFixed(2));
-        const quantidade = parseInt(quantidadeElement.value);
+function multiply() {
+ const numberInput = document.getElementById("numberInput");
+ const number = parseFloat(numberInput.value);
 
-        if (isNaN(quantidade)) {
-            alert(`Por favor, insira um número válido para o valor ${valor.toFixed(2)}`);
-            return; // Interrompe a execução da função se um valor inválido for encontrado
-        }
+ if (isNaN(number)) {
+ alert("Por favor, insira um número válido.");
+ return;
+ }
 
-        total += valor * quantidade;
-    }
-
-    document.getElementById('total').value = total.toFixed(2);
-});
+ baseValue *= number;
+ resultElement.textContent = `Resultado: ${baseValue.toFixed(2)}`;
+ numberInput.value = "";
+}
