@@ -1,35 +1,144 @@
+/* style.css */
+
+/* --- Geral (Body e Tipografia) --- */
+
 body {
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     min-height: 100vh;
-    background-color: #f0f0f0;
-   }
-   
-   .container {
-    background-color: #fff;
+    margin: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* --- Container Principal --- */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Sombra mais suave e elegante */
+    border-radius: 10px; /* Bordas mais arredondadas */
+    background-color: white;
+    margin-top: 30px;
+    border: 1px solid #e0e0e0; /* Adiciona uma borda sutil */
+}
+
+/* --- Painel de Botões --- */
+
+.button-panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Colunas responsivas, um pouco mais largas */
+    gap: 25px; /* Espaço maior entre os botões */
+    width: 100%;
+}
+
+/* --- Títulos --- */
+
+h1, h2, h3 {
+    color: #28a745;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* --- Botões --- */
+
+.botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Aumenta o padding interno */
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out; /* Transição mais suave */
     text-align: center;
-   }
-   
-   h1 {
-    margin-bottom: 20px;
-   }
-   
-   input[type="number"] {
-    width: 100px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    margin-bottom: 10px;
-   }
-   
-   #result {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 20px;
-   }
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); /* Sombra mais discreta */
+    white-space: nowrap;
+    cursor: pointer;
+    height: 80px;
+    width: 100%;
+}
+
+.botao:hover {
+    background-color: #218838;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais acentuada no hover */
+    transform: translateY(-3px); /* Efeito de elevação maior no hover */
+}
+
+.botao:focus,
+.botao:active {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5); /* Outline verde no focus/active */
+}
+
+/* --- Botões Secundários (Opcional) --- */
+
+.botao-secundario {
+    background-color: #e9ecef;
+    color: #333;
+}
+
+.botao-secundario:hover {
+    background-color: #ced4da;
+}
+
+/* --- Iframe (Removido, já que não é o foco) --- */
+
+/* --- Responsividade --- */
+
+@media (max-width: 768px) {
+    .button-panel {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Colunas responsivas, mais estreitas */
+        gap: 15px;
+    }
+    .container {
+        padding: 20px; /* Reduz o padding em telas menores */
+        border-radius: 8px; /* Bordas menos arredondadas em telas menores */
+    }
+
+    .botao {
+        font-size: 1rem;
+        padding: 15px; /* Reduz o padding em telas menores */
+        height: auto; /* Altura flexível */
+    }
+}
+
+/* --- Cabeçalho (Se houver) --- */
+
+.header {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* --- Rodapé (Se houver) --- */
+
+.footer {
+    width: 100%;
+    background-color: #f8f8f8;
+    color: #666;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    border-top: 1px solid #e0e0e0; /* Adiciona uma borda superior sutil */
+}
