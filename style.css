@@ -1,58 +1,73 @@
 /* style.css */
 
-/* ... (todo o seu CSS anterior, se houver) ... */
-
-/* --- Container Principal --- */
-
-.container {
-    /* Mantém as propriedades que você já tinha, e adicionamos: */
-    display: flex;
-    flex-direction: column; /* Muda para column para alinhar o painel verticalmente */
-    align-items: center; /* Centraliza o painel horizontalmente */
-    padding: 30px;
-    width: 90%;
-    max-width: 900px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
-    background-color: white;
-    margin-top: 30px;
-}
+/* ... (todo o seu CSS anterior para body, container, títulos, etc.) ... */
 
 /* --- Painel de Botões --- */
 
 .button-panel {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    width: 100%; /* Ocupa toda a largura do container */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Ajustado para botões mais largos */
+    gap: 20px; /* Aumentando o espaçamento */
+    width: 100%;
 }
 
 /* --- Botões --- */
 
 .botao {
-    /* Mantém as propriedades que você já tinha, e adicionamos: */
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
-    height: 80px;
-    width: 100%; /* Importante para os botões se ajustarem ao grid */
+    padding: 15px 25px; /* Aumentando o padding lateral */
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px; /* Cantos arredondados */
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    cursor: pointer;
+    width: 100%;
+    min-height: 60px;
 }
+
+.botao:hover {
+    background-color: #218838;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px); /* Reduzindo o efeito de elevação */
+}
+
+.botao:focus,
+.botao:active {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5);
+}
+
 /* --- Responsividade --- */
 
 @media (max-width: 768px) {
     .button-panel {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Colunas responsivas */
-        gap: 15px;
-      }
-    .container{
-        padding: 15px; /*Reduzindo o padding*/
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Ajustando para telas menores */
+        gap: 15px; /* Diminuindo o espaçamento */
     }
 
     .botao {
-        font-size: 1rem;
-        padding: 10px 20px;
-        height: auto; /* Permitir que os botões se ajustem conforme o conteúdo */
-        padding: 15px; /* Aumentar o padding */
-      }
+        padding: 15px 20px; /* Ajustando o padding */
+        font-size: 1rem; /* Diminuindo a fonte */
+    }
 }
+
+@media (max-width: 480px) {
+    .button-panel {
+        grid-template-columns: 1fr; /* Uma coluna em celulares */
+    }
+
+    .botao {
+        font-size: 1.1rem; /* Aumentando a fonte */
+    }
+}
+
+/* ... (restante do seu CSS para cabeçalho, rodapé, etc.) ... */
