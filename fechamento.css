@@ -1,8 +1,9 @@
-.resultados-parciais > div {
+/* style.css */
+#resultados-parciais > div {
     display: inline-block;
     margin-right: 5px;
     padding: 5px 10px;
     border: 1px solid #ccc;
-    min-width: 50px; /* Largura mínima para os resultados */
+    min-width: 50px; 
     text-align: center;
 }
